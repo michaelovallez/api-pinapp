@@ -11,7 +11,7 @@ tags:
   - name: Authentication
   - name: Clientes
 paths:
-  /apirest-php/authentication:
+  /auth:
     post:
       tags:
       - Authentication
@@ -41,7 +41,7 @@ paths:
                   token:
                     type: string
                     description: Token JWT generado
-        '403':
+        '401':
           description: Acceso denegado
           content:
             application/json:
@@ -54,7 +54,7 @@ paths:
 
     x-swagger-router-controller: Authentication
 
-  /apirest-php/creacliente:
+  /creacliente:
     post:
       tags:
       - Clientes
@@ -125,7 +125,7 @@ paths:
                     type: string
                     description: Token not provided.
     x-swagger-router-controller: Clientes
-  /apirest-php/listclientes:
+  /listclientes:
     get:
       tags:
       - Clientes
@@ -177,7 +177,7 @@ paths:
                     type: string
                     description: Token not provided.
     x-swagger-router-controller: Clientes
-  /apirest-php/kpideclientes:
+  /kpideclientes:
     get:
       tags:
       - Clientes
